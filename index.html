@@ -74,18 +74,18 @@
       <button onclick="showSheet('triples')">Triples</button>
       <button onclick="showSheet('rinks')">Rinks</button>
       <button onclick="showSheet('league')">League & Cup Fixtures</button>
-      <button onclick="showSheet('leagueTable')">League Table</button> <!-- League Table now a Slide -->
+      <button onclick="showSheet('leagueTable')">League Table</button>
     </div>
 
     <!-- Embed frames for each Google Sheet -->
-    <iframe id="singles" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoGj0gI-pIBOqPenKH98Ra4dDUyDttdzYDALx7ZvqKgpix474LL741ypAESThuzIYSMg80qEyzfB1p/pubhtml?gid=1264413785&single=true&widget=true&headers=false"></iframe>
-    <iframe id="pairs" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoGj0gI-pIBOqPenKH98Ra4dDUyDttdzYDALx7ZvqKgpix474LL741ypAESThuzIYSMg80qEyzfB1p/pubhtml?gid=1862477449&single=true&widget=true&headers=false"></iframe>
-    <iframe id="triples" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoGj0gI-pIBOqPenKH98Ra4dDUyDttdzYDALx7ZvqKgpix474LL741ypAESThuzIYSMg80qEyzfB1p/pubhtml?gid=1731455689&single=true&widget=true&headers=false"></iframe>
+    <iframe id="singles" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoGj0gI-pIBOqPenKH98Ra4dDUyDttdzYDALx7ZvqKgpix474LL741ypAESThuzIYSMg80qEyzfB1p/pubhtml?gid=2032933045&single=true&widget=true&headers=false"></iframe>
+    <iframe id="pairs" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoGj0gI-pIBOqPenKH98Ra4dDUyDttdzYDALx7ZvqKgpix474LL741ypAESThuzIYSMg80qEyzfB1p/pubhtml?gid=839942263&single=true&widget=true&headers=false"></iframe>
+    <iframe id="triples" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoGj0gI-pIBOqPenKH98Ra4dDUyDttdzYDALx7ZvqKgpix474LL741ypAESThuzIYSMg80qEyzfB1p/pubhtml?gid=507517045&single=true&widget=true&headers=false"></iframe>
     <iframe id="rinks" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoGj0gI-pIBOqPenKH98Ra4dDUyDttdzYDALx7ZvqKgpix474LL741ypAESThuzIYSMg80qEyzfB1p/pubhtml?gid=1106739717&single=true&widget=true&headers=false"></iframe>
     <iframe id="league" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoGj0gI-pIBOqPenKH98Ra4dDUyDttdzYDALx7ZvqKgpix474LL741ypAESThuzIYSMg80qEyzfB1p/pubhtml?gid=706253080&single=true&widget=true&headers=false"></iframe>
 
-    <!-- NEW: League Table as a Google Slide -->
-    <iframe id="leagueTable" src="https://docs.google.com/presentation/d/1BiuzWjU204OnHKhP7-8oCS68KaUW8Q6i2eLD0f9U_6w/edit?slide=id.p#slide=id.p
+    <!-- Fixed League Table (Google Slide) -->
+    <iframe id="leagueTable" src="https://docs.google.com/presentation/d/1BiuzWjU204OnHKhP7-8oCS68KaUW8Q6i2eLD0f9U_6w/embed?start=false&loop=false&delayms=3000"></iframe>
 
     <!-- Back button -->
     <button id="backBtn" onclick="goBack()">⬅ Back to Menu</button>
@@ -93,16 +93,16 @@
 
   <script>
     function showSheet(id) {
-      document.getElementById("menu").style.display = "none";        // Hide menu
-      document.querySelectorAll("iframe").forEach(frame => frame.style.display = "none");  // Hide all sheets/slides
-      document.getElementById(id).style.display = "block";           // Show selected frame
-      document.getElementById("backBtn").style.display = "inline-block"; // Show back button
+      document.getElementById("menu").style.display = "none";
+      document.querySelectorAll("iframe").forEach(frame => frame.style.display = "none");
+      document.getElementById(id).style.display = "block";
+      document.getElementById("backBtn").style.display = "inline-block";
     }
 
     function goBack() {
-      document.querySelectorAll("iframe").forEach(frame => frame.style.display = "none"); // Hide frames
-      document.getElementById("backBtn").style.display = "none"; // Hide back button
-      document.getElementById("menu").style.display = "grid";     // Show menu
+      document.querySelectorAll("iframe").forEach(frame => frame.style.display = "none");
+      document.getElementById("backBtn").style.display = "none";
+      document.getElementById("menu").style.display = "grid";
     }
   </script>
 </body>
